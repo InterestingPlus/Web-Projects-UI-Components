@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App UI Design</title>
+  </head>
+  <body>
+    <main>
+      <section class="text-content">
+        <h2>Montreal</h2>
+        <h1>19°</h1>
+        <h3>Mostly Clear</h3>
+        <h4>H:24° <b>L:18°</b></h4>
+      </section>
+      <img src="assets/house.png" class="house" alt="house" />
+    </main>
+    <footer>
+      <img src="assets/Home-Indicator.svg" alt="Home-Indicator" />
+      <div class="navigation">
+        <h6 id="nav1">Hourly Forecast</h6>
+        <h6 id="nav2">Weekly Forecast</h6>
+        <div class="hr"></div>
+      </div>
+
+      <section class="hourly">
+        <div class="component">
+          <h2>12 AM</h2>
+          <img src="assets/cloud1.png" alt="Weather" />
+          <h1>19°</h1>
+        </div>
+        <div class="component active">
+          <h2>Now</h2>
+          <img src="assets/cloud2.png" alt="Weather" />
+          <h1>19°</h1>
+        </div>
+        <div class="component">
+          <h2>2 AM</h2>
+          <img src="assets/cloud1.png" alt="Weather" />
+          <h1>18°</h1>
+        </div>
+        <div class="component">
+          <h2>3 AM</h2>
+          <img src="assets/cloud4.png" alt="Weather" />
+          <h1>19°</h1>
+        </div>
+        <div class="component">
+          <h2>4 AM</h2>
+          <img src="assets/cloud3.png" alt="Weather" />
+          <h1>19°</h1>
+        </div>
+        <div class="component">
+          <h2>5 AM</h2>
+          <img src="assets/cloud5.png" alt="Weather" />
+          <h1>17°</h1>
+        </div>
+        <div class="component">
+          <h2>6 AM</h2>
+          <img src="assets/cloud4.png" alt="Weather" />
+          <h1>15°</h1>
+        </div>
+      </section>
+
+      <section class="bottom">
+        <img class="top-img" src="assets/Subtract.svg" alt="Subtract" />
+
+        <div class="button">
+          <img src="assets/Ellipse 1.svg" alt="Ellipse 1" class="e1" />
+          <img src="assets/Ellipse 2.svg" alt="Ellipse 2" class="e2" />
+          <img src="assets/Ellipse Blur.svg" alt="Ellipse Blur" class="e3" />
+          <img src="assets/Plus.svg" alt="Plus" class="e4" />
+        </div>
+
+        <img class="bottom-img" src="assets/Rectangle.svg" alt="Rectangle" />
+        <div class="icon">
+          <img src="assets/List.svg" alt="List" />
+          <img src="assets/Hover.svg" alt="Hover" />
+        </div>
+      </section>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

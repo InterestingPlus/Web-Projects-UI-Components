@@ -1,0 +1,233 @@
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  transition: 0.4s all ease;
+
+  /* font-family: SF Pro Display; */
+}
+
+body {
+  background: url("assets/background.png");
+  background-size: cover;
+  background-position: fixed;
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-content {
+  margin-top: 10dvh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.text-content h2 {
+  font-weight: 400;
+  line-height: 41px; /* 120.588% */
+  letter-spacing: 0.374px;
+  font-size: 34px;
+}
+.text-content h1 {
+  font-size: 96px;
+  font-weight: 100;
+  line-height: 70px;
+}
+.text-content h3,
+h4 {
+  color: var(--label-dark-secondary, rgba(235, 235, 245, 0.6));
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+}
+.text-content h4 {
+  color: #fff;
+}
+.text-content h4 b {
+  margin-left: 10px;
+}
+
+img.house {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 390px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  border: 1px solid #ffffff23;
+  backdrop-filter: blur(20px);
+  border-radius: 50px 50px 0 0;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(-150px);
+  z-index: 1;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  background: url("assets/Ellipse-Background.svg");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+  right: 0;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ffffff23;
+  box-shadow: 0 2px 4px rgba(89, 0, 255, 0.233);
+  position: relative;
+}
+.navigation h6 {
+  color: #ffffff9a;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+.navigation h6:hover {
+  color: #fff;
+}
+.navigation .hr {
+  bottom: -2px;
+  left: 30px;
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 57.31%,
+    #c8aaff 78.97%,
+    rgba(255, 255, 255, 0) 97.44%
+  );
+}
+
+/* Components =========  */
+.hourly {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  width: 85%;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 130px;
+}
+.hourly::-webkit-scrollbar {
+  display: none;
+}
+.hourly .component {
+  min-width: 55px;
+  height: 120px;
+  border: 1px solid #ffffff23;
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.384);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background: #6116ec21;
+}
+.component.active {
+  background: #a26fff50;
+}
+.component:hover {
+  background: #d69aff5e;
+}
+.component h2 {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.component img {
+  width: 80%;
+}
+.component h1 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.bottom .top-img {
+  bottom: 0;
+  position: absolute;
+  width: 65%;
+}
+.bottom .bottom-img {
+  width: 100%;
+}
+.bottom .button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.bottom .button * {
+  position: absolute;
+}
+.bottom .button .e1 {
+  top: 0;
+}
+.bottom .button .e2 {
+  top: -18.5px;
+}
+.bottom .button .e3 {
+  top: 5px;
+}
+.bottom .button .e4 {
+  top: 8px;
+  background: #00000000;
+  border-radius: 50%;
+  width: 50px;
+}
+.bottom .button:hover .e4 {
+  background: linear-gradient(to bottom right, #00000033, #00000000);
+}
+.icon {
+  position: absolute;
+  bottom: 20px;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+.icon img {
+  padding: 10px;
+  border-radius: 50%;
+}
+.icon img:hover {
+  background: #ffffff1e;
+}
