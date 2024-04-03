@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Animated Library with Scroll</title>
+    <style>
+      html,
+body {
+  width: 100%;
+  overscroll-behavior: none;
+  min-height: 100%;
+  /* background: linear-gradient(rgb(226, 255, 243), rgb(255, 204, 204)); */
+}
+h1 {
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(rgb(0, 102, 255), rgb(255, 0, 170));
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 42px;
+}
+h3 {
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(
+    rgb(255, 115, 0),
+    rgb(255, 145, 0),
+    rgb(255, 0, 128)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  margin: 0 auto;
+}
+.gallary {
+  height: 200vh;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  z-index: -1;
+
+  &:nth-of-type(1) {
+    background-image: url("https://source.unsplash.com/250x300/?nature");
+  }
+  &:nth-of-type(2) {
+    background-image: url("https://source.unsplash.com/250x301/?nature");
+  }
+  &:nth-of-type(3) {
+    background-image: url("https://source.unsplash.com/250x302/?nature");
+  }
+  &:nth-of-type(4) {
+    background-image: url("https://source.unsplash.com/250x303/?nature");
+  }
+  &:nth-of-type(5) {
+    background-image: url("https://source.unsplash.com/250x304/?nature");
+  }
+  &:nth-of-type(6) {
+    background-image: url("https://source.unsplash.com/250x305/?nature");
+  }
+  &:nth-of-type(7) {
+    background-image: url("https://source.unsplash.com/250x306/?nature");
+  }
+  &:nth-of-type(8) {
+    background-image: url("https://source.unsplash.com/250x308/?nature");
+  }
+  &:nth-of-type(9) {
+    background-image: url("https://source.unsplash.com/250x307/?nature");
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    border-right: 1px solid black;
+  }
+}
+
+.line {
+  border-radius: 1px solid black;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Modern Animated Gallary</h1>
+    <h3>- Jatin Poriya</h3>
+    <section>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </section>
+
+    <section class="gallary">
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+const tl = gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".img",
+      scrub: true,
+    },
+  })
+  .to(".img", {
+    stagger: 0.2,
+    y: -700,
+    srub: true,
+  });
+
+    </script>
+  </body>
+</html>
