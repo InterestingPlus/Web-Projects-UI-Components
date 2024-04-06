@@ -510,6 +510,9 @@ footer p {
   section.cards .card:hover a {
     font-size: 1rem;
   }
+  section.home-content h1 {
+    font-size: 2.8rem;
+  }
 }
 @media screen and (max-width: 760px) {
   section.items {
@@ -521,7 +524,5 @@ footer p {
   section.cards h2 {
     font-size: 1rem;
   }
-  section.home-content h1 {
-    font-size: 2.5rem;
-  }
+  
 }
