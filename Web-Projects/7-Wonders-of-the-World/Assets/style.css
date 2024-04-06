@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s all;
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background: linear-gradient(
+    to right bottom,
+    rgb(67, 67, 67),
+    rgb(16, 16, 16)
+  );
+  color: #fff;
+  position: relative;
+}
+body::-webkit-scrollbar {
+  width: 13px;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-track {
+  width: 13px;
+  background: linear-gradient(#252525, rgb(61, 61, 61));
+}
+body::-webkit-scrollbar-thumb {
+  width: 13px;
+  background: linear-gradient(rgba(255, 0, 0, 0.29), rgba(255, 0, 255, 0.386));
+  border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#f00, #f0f);
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: #594d4d7c;
+  backdrop-filter: blur(5px);
+  border: 1px solid #ffffff5f;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+  border-radius: 50px;
+  z-index: 99;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Lobster", sans-serif;
+  color: #fff;
+}
+nav img {
+  width: 45px;
+}
+nav ul {
+  margin-right: 20px;
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  list-style: none;
+  margin-left: 20px;
+  position: relative;
+}
+nav a {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.1s all !important;
+  cursor: pointer;
+}
+nav ul a.active {
+  color: #ffd20b;
+}
+nav ul a:hover {
+  color: #ffea00;
+  text-decoration: underline;
+}
+nav .bar {
+  display: none;
+}
+nav .bar:hover {
+  background: #ffffff31;
+  border-radius: 50px;
+}
+
+main {
+  background: linear-gradient(
+    to right bottom,
+    rgb(67, 67, 67),
+    rgb(16, 16, 16)
+  );
+}
+/* Image Slider */
+section.slider {
+  display: flex;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+section.slider div {
+  min-width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  animation: slide 8s infinite cubic-bezier(0, 1.16, 0.16, 1.01);
+}
+section.slider div img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+section.content {
+  padding: 40px;
+  max-width: 100vw;
+  margin-top: 100dvh;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px -5px 20px rgba(16, 16, 16, 0.5);
+}
+section.content h1 {
+  color: transparent;
+  font-size: 2rem;
+  background: linear-gradient(rgb(255, 140, 0), rgb(255, 217, 0));
+  background-clip: text;
+  -webkit-background-clip: text;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+}
+section.content p {
+  color: rgba(243, 255, 255, 0.849);
+  letter-spacing: 0.6px;
+  margin-bottom: 15px;
+  line-height: 21px;
+}
+
+section.content h2 {
+  font-size: 1.6rem;
+  color: transparent;
+  background: linear-gradient(rgb(255, 153, 0), rgb(255, 24, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+  padding-bottom: 6px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+section.items {
+  padding: 60px 40px;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #ffba8d;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+section.items div.item {
+  background: rgba(166, 218, 214, 0.048);
+  border: 1px solid rgba(173, 216, 230, 0.377);
+  border-radius: 15px;
+  display: flex;
+  margin-bottom: 40px;
+  gap: 20px;
+  box-shadow: 0 0 10px rgb(16, 16, 16);
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+}
+section.items img {
+  width: 60%;
+  min-width: 40%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  position: relative;
+  z-index: 99;
+  scale: 1;
+  filter: saturate(1);
+}
+section.items img:hover {
+  scale: 1.1;
+  filter: saturate(3);
+}
+
+section.items div.info {
+  padding: 15px 10px;
+}
+section.items h2 {
+  font-size: 1.3rem;
+  color: transparent;
+  background: linear-gradient(
+    rgba(0, 255, 242, 0.774),
+    rgba(44, 171, 255, 0.884)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(229, 229, 255, 0.226);
+}
+section.items p {
+  color: rgba(243, 255, 255, 0.616);
+  letter-spacing: 0.6px;
+  margin-bottom: 15px;
+  line-height: 21px;
+}
+
+@media screen and (max-width: 1100px) {
+  section.content {
+    margin-top: 45dvh;
+  }
+  section.content h1 {
+    font-size: 1.6rem;
+  }
+  section.content h2 {
+    font-size: 1.45rem;
+  }
+  .items h2 {
+    font-size: 1rem;
+  }
+  .items p {
+    font-size: 0.95rem;
+  }
+  nav ul {
+    top: -10.5px;
+    left: -60px;
+    width: 45vw;
+    min-width: 230px;
+    height: 100dvh;
+    position: fixed;
+    flex-direction: column;
+    z-index: 9999;
+    background: #252525ee;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px) !important;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  nav .bar {
+    z-index: 99;
+    display: block;
+    cursor: pointer;
+    padding: 5px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+  }
+
+  section.slider {
+    width: 100vw;
+    height: 50dvh;
+    z-index: -1;
+  }
+  section.slider div {
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 50dvh;
+  }
+  section.slider div img {
+    position: relative;
+    top: 0;
+    height: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    max-width: auto;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 760px) {
+  section.items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
