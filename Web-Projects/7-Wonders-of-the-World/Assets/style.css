@@ -365,7 +365,7 @@ section.items img {
   filter: saturate(1);
 }
 section.items img:hover {
-  scale: 1.1;
+  scale: 1.05;
   filter: saturate(3);
 }
 
@@ -492,6 +492,9 @@ footer p {
 footer p .svg {
   color: #fff;
   text-decoration: none;
+}
+footer span {
+  color: #ff9500;
 }
 .feather-globe {
   fill: #333;
