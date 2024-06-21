@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+    <title>Iphone web Animation</title>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html" class="logo">iPhone 13 Pro</a>
+        <div class="nav-links">
+            <a href="#">Overview</a>
+            <a href="#">Switching to iPhone</a>
+            <a href="#">Tech Specs</a>
+            <button class="buy-button">Buy</button>
+        </div>
+    </nav>
+
+    <section class="first-page">
+        <div class="first-page-text">
+            <h1 class="first-page-title">iPhone 13 Pro</h1>
+            <h2 class="first-page-subtitle">Oh. So. Pro</h2>
+        </div>
+
+        <!--add front page video-->
+        <video class="intro-video" autoplay src="./images/intro-animation.mov" muted></video>
+    </section>
+
+
+    <!-- second-page -->
+    <section class="second-page">
+        <video class="smoke-video" src="./images/smoke-video.mp4" autoplay loop muted></video>
+        <div class="second-text">
+            <p class="text-container">
+                <span class="highlight">A dramatically more powerful camera system.</span>
+                <span class="highlight">A display so responsive, every interaction feels new again.</span>
+                <span class="highlight"> The world's fastest smartphone chip. </span>
+                <span class="highlight">Exceptional durability.</span>
+                <span class="highlight">And a huge leap in battery life.</span>
+                </br>
+                </br>
+                <span class="highlight">Let's pro</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- third-page -->
+    <section class="third-page">
+        <div class="product-text-container">
+            <div class="product-text-left">
+                <p class="phone-title">iPhone 13 Pro Max</p>
+                <p class="phone-size pro-size">6.7"</p>
+            </div>
+
+            <div class="product-text-right">
+                <div class="phone-title">Iphone 13 Max</div>
+                <p class="phone-size max-size">6.1"</p>
+            </div>
+        </div>
+
+        <div class="product-images">
+            <img src="./images/large-phone.png" class="large-phone" alt="large-phone">
+            <img src="./images/small-phone.png" class="small-phone" alt="small-phone">
+        </div>
+
+        <p class="retina-line">Super Retina XDR display with ProMotion</p>
+    </section>
+
+    <!-- forth-page -->
+    <section class="forth-page">
+
+        <div class="purchase-left">
+            <div class="phone-gallery">
+                <div class="phone-gallery-container blue-cont">
+                    <img class="blue-back" src="./images/blue-iphone-back.png" alt="blue-iphone-back">
+                </div>
+
+                <div class="phone-gallery-container blue-cont">
+                    <img class="silver-back" src="./images/silver-iphone-back.png" alt="silver-iphone-back">
+                </div>
+
+                <div class="phone-gallery-container blue-cont">
+                    <img class="gold-back" src="./images/gold-iphone-back.png" alt="gold-iphone-back.">
+                </div>
+
+                <div class="phone-gallery-container blue-cont">
+                    <img class="graphite-back" src="./images/graphite-iphone-back.png" alt="graphite-iphone-back">
+                </div>
+            </div>
+
+            <div class="swatch-container">
+                <div class="swatches">
+                    <img src="./images/swatch-blue.svg" swatch="blue" alt="">
+                    <img src="./images/swatch-silver.svg" swatch="silver" alt="">
+                    <img src="./images/swatch-gold.svg" swatch="gold" alt="">
+                    <img src="./images/swatch-graphite.svg" swatch="graphite" alt="">
+                </div>
+
+                <p><span>Sierra Blue</span>, <span>Silver</span>, <span>Gold</span>, <span>Graphite.</span></p>
+            </div>
+        </div>
+
+        <div class="purchase-right">
+            <img src="./images/blue-closeup.png" class="blue phone" alt="blue phone">
+            <img src="./images/silver-closeup.png" class="silver phone" alt="silver phone">
+            <img src="./images/gold-closeup.png" class="gold phone" alt="gold phone">
+            <img src="./images/graphite-closeup.png" class="graphite phone" alt="graphite phone">
+        </div>
+    </section>
+
+    <!-- fifth-page -->
+    <section class="fifth-page">
+        <video class="product-video" src="./images/output-2.mp4" muted></video>
+
+        <div class="product-info-container">
+            <div class="left-info">
+                <h4>up to <br /><span> 25% brighter outdoors</span><br />for content that looks even more vivid in
+                    sunlight</h4>
+                <h4><span>Even more display area</span><br />thanks to smaller camera system.</h4>
+            </div>
+
+            <div class="right-info">
+                <h4>
+                    <span>Custom OLED technology</span><br />pushes the display's incredible resolution and color right
+                    to the edge
+                </h4>
+                <h4>up to <span>1200 nits</span> peak brightness for your HDR photos and videos</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- sixth-page -->
+    <section class="sixth-page">
+        <div class="photo-description">
+            <h3 class="photo-title">Customize <br /> your camera to</h3>
+            <h4 class="photo-subtitle">lock in your look.</h4>
+        </div>
+
+        <div class="portrait-container">
+            <img src="./images/portrait.jpg" class="portrait" alt="portrait">
+        </div>
+
+        <div class="phone-video">
+            <img src="./images/iphone-frame.png" alt="iphone-frame">
+            <video src="./images/iphone-camera-video.mp4" autoplay muted loop></video>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+        integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"
+        integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
