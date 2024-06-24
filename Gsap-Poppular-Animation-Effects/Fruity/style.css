@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  user-select: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+h1,
+h5,
+h6 {
+  font-family: "Pacifico", cursive;
+}
+
+h3,
+h4 {
+  font-family: "Raleway", sans-serif;
+}
+h2 {
+  font-family: sans-serif;
+}
+
+nav,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Nav Start */
+
+nav {
+  width: 100vw;
+  padding: 1vw 10vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+nav h1 {
+  font-size: 2rem;
+}
+nav .links {
+  display: flex;
+  gap: 1vw;
+}
+nav a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 23px;
+  border-radius: 50px;
+  transition: .2s ease;
+}
+nav a:hover{
+    background: #32cd3272;
+}
+nav button {
+  background: #ff4500;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.2rem;
+  border: 3px solid #22022a;
+  font-weight: 600;
+  transition: 0.2s all ease-in-out;
+}
+nav button:hover {
+  color: #fff;
+  background: #ff440078;
+  border: 3px solid #fff;
+}
+
+/* Nav End */
+
+.section {
+  padding: 10vw;
+  width: 100vw;
+  height: 100dvh;
+  background: linear-gradient(#ffa500, #ff7300);
+  position: relative;
+}
+.section h2 {
+  font-size: 20vw;
+  font-weight: 900;
+}
+.section img{
+    position: absolute;
+    width: 20vw;
+    z-index: 2;
+}
+#maaza{
+    width: 50vw;
+    top: 10%;
+    left: 25%;
+}
+#mango{
+    width: 25vw;
+    top: 50%;
+    left: 55%;
+}
+#leafs{
+    width: 30vw;
+    top: 0;
+    left: -30px;
+    rotate: 90deg;
+}
+#leaf{
+    width: 25vw;
+    top: 45%;
+    left: 15%;
+    
+}
+
+
+
+.section.two {
+    background: #22022a; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.two svg{
+    margin-top: 10vh;
+    scale: 1.05;
+    margin-left: -20px;
+}
+.two h1{
+    margin-top: 10vh;
+    font-size: 4rem;
+    margin-bottom: 6vh;
+    color: #FFA500;
+}
+.two p{
+    font-size: 1.6rem;
+
+}
