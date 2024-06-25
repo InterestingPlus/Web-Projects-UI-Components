@@ -3,7 +3,8 @@ let tl = gsap.timeline({
     trigger: ".two",
     start: "10% 90%",
     end: "30% 40%",
-    scrub: 1,
+    scrub: 1,
+scroller: "#main",
     // markers: true,
   },
 });
