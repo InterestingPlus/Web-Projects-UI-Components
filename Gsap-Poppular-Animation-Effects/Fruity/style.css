@@ -92,7 +92,7 @@ nav button:hover {
 
 /* Nav End */
 
-main {
+#main {
 width: 100vw;
 max-height: 100dvh;
   overflow-y: scroll;
