@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Tool</title>
+  </head>
+  <body>
+    <h1>CSS Box Tool</h1>
+
+    <div class="container">
+      <div id="box" class="box"></div>
+      <h2 class="code">
+        .box { width: 300px; height: 300px; background: #9574ff; border-radius:
+        20px; }
+      </h2>
+    </div>
+
+    <main>
+      <button id="addBtn">Add Box Shadow</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Inset</th>
+            <th>X</th>
+            <th>Y</th>
+            <th>Blur</th>
+            <th>Spread</th>
+            <th>Color</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody></tbody>
+      </table>
+    </main>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100dvh;
+        background: #f0f3fa;
+      }
+      h1 {
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 6rem;
+        padding: 2rem 15rem;
+      }
+      #box {
+        width: 200px;
+        min-width: 200px;
+        height: 200px;
+        background: linear-gradient(45deg, #ff6b6b, #f5f5f5);
+        border-radius: 20px;
+      }
+      .code {
+        background: #fff;
+        padding: 1.7rem;
+        font-family: sans-serif;
+        font-size: 20px;
+        border: 1px solid #ddd;
+      }
+
+      main {
+        margin: 2rem;
+        padding: 3rem;
+        user-select: none;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        border-radius: 10px;
+
+        background: #fff;
+        box-shadow: 0 0 10px 10px solid black;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+
+      #addBtn {
+        background: greenyellow;
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        cursor: grab;
+        text-wrap: nowrap;
+        max-width: fit-content;
+      }
+      input {
+        cursor: grab;
+      }
+
+      input[type="checkbox"] {
+        scale: 1.5;
+      }
+      tr button {
+        color: #fff;
+        background: rgb(239, 58, 18);
+        padding: 0.5rem 1.3rem;
+        border: none;
+        border-radius: 30px;
+        cursor: grab;
+        text-wrap: nowrap;
+        max-width: fit-content;
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const box = document.querySelector(".box");
+        const table = document.querySelector("tbody");
+        const addBtn = document.getElementById("addBtn");
+        const code = document.querySelector(".code");
+        const shadows = [];
+
+        // Display Box Shadow Code & Update the Box Styles
+        function updateBoxShadow() {
+          let boxShadow = shadows
+            .map(
+              (shadow) =>
+                `${shadow.inset} ${shadow.x}px ${shadow.y}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}`
+            )
+            .join(", ");
+
+          box.style.boxShadow = boxShadow;
+          code.textContent = `.box { width: 300px; height: 300px; background: #9574ff; border-radius: 20px;${
+            boxShadow ? " box-shadow:" : " "
+          } ${boxShadow}${boxShadow ? ";" : ""} }`;
+        }
+
+        // Update on Delete Row
+        function updateIndices() {
+          Array.from(table.rows).forEach((row, index) => {
+            row.querySelectorAll("input").forEach((input) => {
+              input.setAttribute("data-index", index);
+            });
+            row.querySelector("button").setAttribute("data-index", index);
+          });
+        }
+
+        // Add Raws
+        function addRow() {
+          const row = document.createElement("tr");
+
+          row.innerHTML = `
+          <td><input type="checkbox" data-index="${shadows.length}" data-type="inset" /></td>
+          <td><input type="range" min="-200" max="200" value="10" data-index="${shadows.length}" data-type="x" /></td>
+          <td><input type="range" min="-200" max="200" value="10" data-index="${shadows.length}" data-type="y" /></td>
+          <td><input type="range" min="0" max="200" value="20" data-index="${shadows.length}" data-type="blur" /></td>
+          <td><input type="range" min="-100" max="100" value="10" data-index="${shadows.length}" data-type="spread" /></td>
+          <td><input type="color" data-index="${shadows.length}" data-type="color" /></td>
+          <td><button data-index="${shadows.length}">Delete</button></td>
+        `;
+
+          table.appendChild(row);
+          shadows.push({
+            inset: "",
+            x: 10,
+            y: 10,
+            blur: 20,
+            spread: 10,
+            color: "#000000",
+          });
+          updateBoxShadow();
+
+          row.querySelectorAll("input").forEach((input) => {
+            input.addEventListener("change", (e) => {
+              updateValues(e);
+            });
+            input.addEventListener("mousemove", (e) => {
+              updateValues(e);
+            });
+
+            function updateValues(e) {
+              const index = e.target.getAttribute("data-index");
+              const type = e.target.getAttribute("data-type");
+              shadows[index][type] = ifInset();
+
+              function ifInset() {
+                if (type == "inset") {
+                  if (e.target.checked) {
+                    return "inset";
+                  } else {
+                    return "";
+                  }
+                } else {
+                  return e.target.value;
+                }
+              }
+
+              updateBoxShadow();
+            }
+          });
+
+          row.querySelector("button").addEventListener("click", (e) => {
+            const index = e.target.getAttribute("data-index");
+            shadows.splice(index, 1);
+            table.removeChild(row);
+            updateIndices();
+            updateBoxShadow();
+          });
+        }
+
+        // Add Button
+        addBtn.addEventListener("click", addRow);
+      });
+    </script>
+  </body>
+</html>
