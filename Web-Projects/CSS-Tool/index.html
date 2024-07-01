@@ -189,6 +189,9 @@
             input.addEventListener("mousemove", (e) => {
               updateValues(e);
             });
+            input.addEventListener("touchmove", (e) => {
+              updateValues(e);
+            });
 
             function updateValues(e) {
               const index = e.target.getAttribute("data-index");
