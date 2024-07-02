@@ -3,17 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ColourFull CSS Code -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+
     <title>CSS Box Tool</title>
   </head>
   <body>
     <div class="container">
       <div>
-        <h1>CSS Box Tool</h1>
+        <h1>CSS Box Shadow Generator</h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat atque
-          consectetur neque pariatur, porro adipisci corporis tenetur non
-          quibusdam magnam repellendus a, veritatis fuga excepturi sint? Error
-          reiciendis quo quam.
+          Enhance your web designs with custom box shadows effortlessly. Our CSS
+          Box Shadow Generator tool allows you to create and preview stylish
+          shadow effects for your web elements in real-time.
         </p>
       </div>
       <div id="box" class="box"></div>
@@ -57,10 +64,13 @@
         <tbody></tbody>
       </table>
 
-      <h2 class="code">
-        .box { width: 300px; height: 300px; background: linear-gradient(45deg,
-        #ff6b6b, #f5f5f5); border-radius: 20px; }
-      </h2>
+      <pre>
+        <button id="copy">Copy</button>
+        <code class="language-css">
+          .box { width: 300px; height: 300px; background: linear-gradient(45deg,
+            #ff6b6b, #f5f5f5); border-radius: 20px; }
+          </code>
+        </pre>
     </main>
 
     <style>
@@ -97,12 +107,10 @@
         background: linear-gradient(45deg, #ff6b6b, #f5f5f5);
         border-radius: 20px;
       }
-      .code {
-        background: #fff;
-        padding: 1.7rem;
-        font-family: sans-serif;
-        font-size: 20px;
-        border: 1px solid #ddd;
+      code.language-css {
+        text-wrap: wrap;
+        font-size: 0.9rem;
+        max-width: 100%;
       }
 
       main {
@@ -150,6 +158,13 @@
         text-wrap: nowrap;
         max-width: fit-content;
       }
+      #copy {
+        padding: 0.2rem 0.6rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
       input {
         cursor: grab;
       }
@@ -186,7 +201,7 @@
 
         const table = document.querySelector("tbody"),
           addBtn = document.getElementById("addBtn"),
-          code = document.querySelector(".code"),
+          code = document.querySelector("code.language-css"),
           shadows = [];
 
         // Display Box Shadow Code & Update the Box Styles
@@ -210,6 +225,7 @@
           }, ${bgcolor1.value}); border-radius: ${radius.value}px;${
             boxShadow ? " box-shadow:" : " "
           } ${boxShadow}${boxShadow ? ";" : ""} }`;
+          Prism.highlightElement(code);
         }
 
         // Update on Delete Row
@@ -284,6 +300,11 @@
 
         // Add Button
         addBtn.addEventListener("click", addRow);
+
+        // Copy
+        copy.addEventListener("click", () => {
+          navigator.clipboard.writeText(code.textContent);
+        });
       });
     </script>
   </body>
