@@ -6,19 +6,41 @@
     <title>CSS Box Tool</title>
   </head>
   <body>
-    <h1>CSS Box Tool</h1>
-
     <div class="container">
+      <div>
+        <h1>CSS Box Tool</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat atque
+          consectetur neque pariatur, porro adipisci corporis tenetur non
+          quibusdam magnam repellendus a, veritatis fuga excepturi sint? Error
+          reiciendis quo quam.
+        </p>
+      </div>
       <div id="box" class="box"></div>
-      <h2 class="code">
-        .box { width: 300px; height: 300px; background: #9574ff; border-radius:
-        20px; }
-      </h2>
     </div>
 
     <main>
-      <button id="addBtn">Add Box Shadow</button>
+      <div class="controls">
+        <button id="addBtn">Add Box Shadow</button>
 
+        <div>
+          <div>
+            <label for="radius">Radius :</label>
+            <input type="range" id="radius" min="0" max="100" value="20" />
+          </div>
+
+          <div>
+            <label for="bgcolor">Color :</label>
+            <input type="color" id="bgcolor" value="#ff6b6b" />
+            <input type="color" id="bgcolor1" value="#f5f5f5" />
+          </div>
+
+          <div>
+            <label for="bgcolor2">Background-Color :</label>
+            <input type="color" id="bgcolor2" value="#f0f3fa" />
+          </div>
+        </div>
+      </div>
       <table>
         <thead>
           <tr>
@@ -34,6 +56,11 @@
 
         <tbody></tbody>
       </table>
+
+      <h2 class="code">
+        .box { width: 300px; height: 300px; background: linear-gradient(45deg,
+        #ff6b6b, #f5f5f5); border-radius: 20px; }
+      </h2>
     </main>
 
     <style>
@@ -54,10 +81,15 @@
       .container {
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        gap: 6rem;
-        padding: 2rem 15rem;
+        justify-content: space-between;
+        padding: 4rem 12rem 2rem 8rem;
+        gap: 8rem;
       }
+      .container h1,
+      p {
+        text-align: left;
+      }
+
       #box {
         width: 200px;
         min-width: 200px;
@@ -75,20 +107,33 @@
 
       main {
         margin: 2rem;
-        padding: 3rem;
-        user-select: none;
+        padding: 1.2rem 3rem;
 
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
 
+        border: 2px solid #d1d6e0;
         border-radius: 10px;
 
         background: #fff;
         box-shadow: 0 0 10px 10px solid black;
       }
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .controls > div {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        user-select: none;
+      }
+
       table {
         border-collapse: collapse;
+        user-select: none;
       }
       th,
       td {
@@ -99,7 +144,7 @@
 
       #addBtn {
         background: greenyellow;
-        padding: 1rem 2rem;
+        padding: 0.5rem 1rem;
         border-radius: 30px;
         cursor: grab;
         text-wrap: nowrap;
@@ -127,10 +172,22 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const box = document.querySelector(".box");
-        const table = document.querySelector("tbody");
-        const addBtn = document.getElementById("addBtn");
-        const code = document.querySelector(".code");
-        const shadows = [];
+
+        const controls = [
+          document.getElementById("radius"),
+          document.getElementById("bgcolor"),
+          document.getElementById("bgcolor1"),
+          document.getElementById("bgcolor2"),
+        ];
+
+        controls.forEach((input) => {
+          input.addEventListener("input", updateBoxShadow);
+        });
+
+        const table = document.querySelector("tbody"),
+          addBtn = document.getElementById("addBtn"),
+          code = document.querySelector(".code"),
+          shadows = [];
 
         // Display Box Shadow Code & Update the Box Styles
         function updateBoxShadow() {
@@ -141,8 +198,16 @@
             )
             .join(", ");
 
+          // CSS
           box.style.boxShadow = boxShadow;
-          code.textContent = `.box { width: 300px; height: 300px; background: #9574ff; border-radius: 20px;${
+          box.style.borderRadius = `${radius.value}px`;
+          box.style.background = `linear-gradient(45deg, ${bgcolor.value}, ${bgcolor1.value})`;
+          document.body.style.background = bgcolor2.value;
+
+          // Source Code
+          code.textContent = `.box { width: 300px; height: 300px; background: linear-gradient(45deg, ${
+            bgcolor.value
+          }, ${bgcolor1.value}); border-radius: ${radius.value}px;${
             boxShadow ? " box-shadow:" : " "
           } ${boxShadow}${boxShadow ? ";" : ""} }`;
         }
@@ -162,34 +227,28 @@
           const row = document.createElement("tr");
 
           row.innerHTML = `
-          <td><input type="checkbox" data-index="${shadows.length}" data-type="inset" /></td>
-          <td><input type="range" min="-200" max="200" value="10" data-index="${shadows.length}" data-type="x" /></td>
-          <td><input type="range" min="-200" max="200" value="10" data-index="${shadows.length}" data-type="y" /></td>
-          <td><input type="range" min="0" max="200" value="20" data-index="${shadows.length}" data-type="blur" /></td>
-          <td><input type="range" min="-100" max="100" value="10" data-index="${shadows.length}" data-type="spread" /></td>
-          <td><input type="color" data-index="${shadows.length}" data-type="color" /></td>
-          <td><button data-index="${shadows.length}">Delete</button></td>
-        `;
+                <td><input type="checkbox" data-index="${shadows.length}" data-type="inset" /></td>
+                <td><input type="range" min="-200" max="200" value="8" data-index="${shadows.length}" data-type="x" /></td>
+                <td><input type="range" min="-200" max="200" value="8" data-index="${shadows.length}" data-type="y" /></td>
+                <td><input type="range" min="0" max="200" value="16" data-index="${shadows.length}" data-type="blur" /></td>
+                <td><input type="range" min="-100" max="100" value="0" data-index="${shadows.length}" data-type="spread" /></td>
+                <td><input type="color" value="#949494" data-index="${shadows.length}" data-type="color" /></td>
+                <td><button data-index="${shadows.length}">Delete</button></td>
+              `;
 
           table.appendChild(row);
           shadows.push({
             inset: "",
-            x: 10,
-            y: 10,
-            blur: 20,
-            spread: 10,
-            color: "#000000",
+            x: 8,
+            y: 8,
+            blur: 16,
+            spread: 0,
+            color: "#949494",
           });
           updateBoxShadow();
 
           row.querySelectorAll("input").forEach((input) => {
-            input.addEventListener("change", (e) => {
-              updateValues(e);
-            });
-            input.addEventListener("mousemove", (e) => {
-              updateValues(e);
-            });
-            input.addEventListener("touchmove", (e) => {
+            input.addEventListener("input", (e) => {
               updateValues(e);
             });
 
