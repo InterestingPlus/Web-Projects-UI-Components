@@ -36,7 +36,7 @@ Preview Changes: Watch the sample element update in real-time as you adjust the 
 Copy CSS Code: Once satisfied with the shadow effect, simply copy the generated CSS code and paste it into your stylesheet.
 Make your web elements stand out with beautifully crafted shadows. Start creating now! -->
       </div>
-      <div id="box" class="box"></div>
+      <div id="box" class="box">.box</div>
     </div>
 
     <main>
@@ -120,7 +120,17 @@ Make your web elements stand out with beautifully crafted shadows. Start creatin
         height: 200px;
         background: linear-gradient(45deg, #ff6b6b, #f5f5f5);
         border-radius: 20px;
+
+        display: grid;
+        place-items: center;
+
+        font-size: 2rem;
+        text-align: center;
+        color: #fff;
+        font-weight: 900;
+        font-family: 'Courier New', Courier, monospace;
       }
+
       code.language-css {
         text-wrap: wrap;
         font-size: 0.9rem;
@@ -279,8 +289,8 @@ Make your web elements stand out with beautifully crafted shadows. Start creatin
           content: "Color : ";
         }
         tr:nth-of-type(2n) {
-        border-top: #d8cfcf;
-      }
+          border-top: #d8cfcf;
+        }
       }
     </style>
 
