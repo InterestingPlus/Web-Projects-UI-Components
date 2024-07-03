@@ -11,7 +11,54 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
 
-    <title>CSS Box Tool</title>
+    <!-- SEO - Meta Tags -->
+
+    <meta
+      name="description"
+      content="CSS Box Shadow Tool - Create and customize box shadow properties with ease. This tool helps you dynamically add and remove shadow properties and displays the corresponding CSS code. Perfect for developers and designers."
+    />
+    <meta
+      name="keywords"
+      content="CSS, Box Shadow, CSS Tool, Web Development, Frontend Development, HTML, JavaScript, Jatin Poriya, Web Projects, Developer Tools"
+    />
+    <meta name="author" content="Jatin Poriya" />
+    <meta
+      property="og:title"
+      content="CSS Box Shadow Tool | Jatin Poriya's Web Projects"
+    />
+    <meta
+      property="og:description"
+      content="Create and customize box shadow properties with ease. This tool helps you dynamically add and remove shadow properties and displays the corresponding CSS code."
+    />
+    <meta
+      property="og:url"
+      content="https://web-projects-ui.netlify.app/web-projects/css-tool/"
+    />
+    <meta
+      property="og:image"
+      content="https://web-projects-ui.netlify.app/web-projects/css-tool/hero.jpeg"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="CSS Box Shadow Tool | Jatin Poriya's Web Projects"
+    />
+    <meta
+      name="twitter:description"
+      content="Create and customize box shadow properties with ease. This tool helps you dynamically add and remove shadow properties and displays the corresponding CSS code."
+    />
+    <meta
+      name="twitter:image"
+      content="https://web-projects-ui.netlify.app/web-projects/css-tool/hero.jpeg"
+    />
+    <title>CSS Box Shadow Tool | Jatin Poriya's Web Projects</title>
+    <link
+      rel="canonical"
+      href="https://web-projects-ui.netlify.app/web-projects/css-tool/"
+    />
+
+    <!-- SEO - End -->
   </head>
   <body>
     <div class="container">
@@ -112,6 +159,11 @@ Make your web elements stand out with beautifully crafted shadows. Start creatin
       .container h1,
       p {
         text-align: left;
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.3rem;
+        margin-top: 1rem;
       }
 
       #box {
@@ -128,7 +180,7 @@ Make your web elements stand out with beautifully crafted shadows. Start creatin
         text-align: center;
         color: #fff;
         font-weight: 900;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: "Courier New", Courier, monospace;
       }
 
       code.language-css {
@@ -213,7 +265,7 @@ Make your web elements stand out with beautifully crafted shadows. Start creatin
         max-width: fit-content;
       }
 
-      @media screen and (width < 800px) {
+      @media screen and (width < 940px) {
         body {
           max-width: 100vw;
           overflow-x: hidden;
@@ -225,9 +277,13 @@ Make your web elements stand out with beautifully crafted shadows. Start creatin
           max-width: 100vw;
           padding: 2rem;
           padding-bottom: 5rem;
+          gap: 5rem;
+        }
+        .container h1 {
+          font-size: 2.2rem;
         }
         .container p {
-          margin-top: 1rem;
+          font-size: 1rem;
         }
 
         .controls {
@@ -290,6 +346,17 @@ Make your web elements stand out with beautifully crafted shadows. Start creatin
         }
         tr:nth-of-type(2n) {
           border-top: #d8cfcf;
+        }
+      }
+      @media screen and (height > 1500px) {
+        h1 {
+          font-size: 1.5rem !important;
+        }
+        p {
+          font-size: 0.58rem;
+        }
+        .container {
+          padding: 5rem;
         }
       }
     </style>
