@@ -21,15 +21,26 @@
           Enhance your web designs with custom box shadows effortlessly. Our CSS
           Box Shadow Generator tool allows you to create and preview stylish
           shadow effects for your web elements in real-time.
+          <br />
+          Make your web elements stand out with beautifully crafted shadows.
+          Start creating now!
         </p>
+
+        <!-- Key Features:
+Dynamic Customization: Easily adjust shadow properties such as offset, blur radius, spread radius, and color to create the perfect shadow effect.
+Real-Time Preview: Instantly see how your changes affect the appearance of the shadow, making it easy to fine-tune the design.
+CSS Code Generation: Get the corresponding CSS code for your custom box shadow, ready to be copied and pasted into your project.
+How to Use:
+Adjust Shadow Properties: Use the sliders and input fields to modify the shadow's offset, blur, spread, and color.
+Preview Changes: Watch the sample element update in real-time as you adjust the settings.
+Copy CSS Code: Once satisfied with the shadow effect, simply copy the generated CSS code and paste it into your stylesheet.
+Make your web elements stand out with beautifully crafted shadows. Start creating now! -->
       </div>
       <div id="box" class="box"></div>
     </div>
 
     <main>
       <div class="controls">
-        <button id="addBtn">Add Box Shadow</button>
-
         <div>
           <div>
             <label for="radius">Radius :</label>
@@ -47,7 +58,10 @@
             <input type="color" id="bgcolor2" value="#e0e6ff" />
           </div>
         </div>
+
+        <button id="addBtn">Add Box Shadow</button>
       </div>
+
       <table>
         <thead>
           <tr>
@@ -143,6 +157,12 @@
         border-collapse: collapse;
         user-select: none;
       }
+      tr:nth-of-type(2n) {
+        background: #f1efef;
+      }
+      tr:nth-of-type(2n) td {
+        border-color: #fff;
+      }
       th,
       td {
         border: 1px solid #ddd;
@@ -182,15 +202,94 @@
         text-wrap: nowrap;
         max-width: fit-content;
       }
+
+      @media screen and (width < 800px) {
+        body {
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+
+        .container {
+          flex-direction: column;
+          justify-content: center;
+          max-width: 100vw;
+          padding: 2rem;
+          padding-bottom: 5rem;
+        }
+        .container p {
+          margin-top: 1rem;
+        }
+
+        .controls {
+          flex-direction: column;
+        }
+        .controls > div {
+          margin-top: 1rem;
+          flex-direction: column;
+          align-items: start;
+          gap: 1rem;
+        }
+        .controls label {
+          margin-right: 1rem;
+        }
+
+        main {
+          margin: 0;
+          padding: 1rem 1rem;
+          width: 100vw;
+          max-width: 100vw;
+          overflow-x: hidden;
+
+          border: 2px solid #d1d6e0;
+          border-radius: 0;
+
+          background: #fff;
+          box-shadow: 0 0 10px 10px solid black;
+        }
+
+        #addBtn {
+          margin-top: 1rem;
+        }
+        th {
+          display: none;
+        }
+        tr td {
+          display: flex;
+          padding-left: 2rem;
+        }
+        td::before {
+          padding-right: 0.8rem;
+        }
+        td:nth-child(1)::before {
+          content: "Inset : ";
+        }
+        td:nth-child(2)::before {
+          content: "X : ";
+        }
+        td:nth-child(3)::before {
+          content: "Y : ";
+        }
+        td:nth-child(4)::before {
+          content: "Blur : ";
+        }
+        td:nth-child(5)::before {
+          content: "Spread : ";
+        }
+        td:nth-child(6)::before {
+          content: "Color : ";
+        }
+        tr:nth-of-type(2n) {
+        border-top: #d8cfcf;
+      }
+      }
     </style>
 
     <script>
+      window.addEventListener("beforeunload", (event) => {
+        event.preventDefault();
+        event.returnValue = "";
+      });
 
-// Refresh Confirmation 
-window.addEventListener("beforeunload", (event)=>{
-   event.preventDefault();
-   event.returnValue = "";
-})
       document.addEventListener("DOMContentLoaded", () => {
         const box = document.querySelector(".box");
 
@@ -305,7 +404,8 @@ window.addEventListener("beforeunload", (event)=>{
         }
 
         // Add Button
-       addRow(); addBtn.addEventListener("click", addRow);
+        addRow();
+        addBtn.addEventListener("click", addRow);
 
         // Copy
         copy.addEventListener("click", () => {
