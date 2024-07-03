@@ -185,6 +185,12 @@
     </style>
 
     <script>
+
+// Refresh Confirmation 
+window.addEventListener("beforeunload", (event)=>{
+   event.preventDefault();
+   event.returnValue = "";
+})
       document.addEventListener("DOMContentLoaded", () => {
         const box = document.querySelector(".box");
 
