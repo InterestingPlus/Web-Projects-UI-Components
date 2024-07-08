@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ColourFull CSS Code -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
-
     <!-- SEO - Meta Tags -->
 
     <meta
@@ -62,6 +55,22 @@
 
     <!-- SEO - End -->
 
+    <!-- Custom Color Picker CDN Start -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+    <!-- Custom Color Picker CDN End -->
+
+    <!-- ColourFull CSS Code CDN Start -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <!-- ColourFull CSS Code CDN End -->
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Quicksand:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap"
@@ -71,7 +80,7 @@
   <body>
     <section class="container">
       <div>
-        <h1>CSS <span>Box Shadow</span> Generator</h1>
+        <h1>CSS <strong>Box Shadow</strong> Generator</h1>
         <p>
           Enhance your web designs with custom box shadows effortlessly. Our CSS
           Box Shadow Generator tool allows you to create and preview
@@ -89,20 +98,17 @@
     <main>
       <div class="controls">
         <div>
-          <div>
+          <div class="radius">
             <label for="radius">Radius :</label>
             <input type="range" id="radius" min="0" max="100" value="20" />
           </div>
 
-          <div>
+          <div id="inner1">
             <label for="bgcolor">Color :</label>
-            <input type="color" id="bgcolor" value="#ff6b6b" />
-            <input type="color" id="bgcolor1" value="#f5f5f5" />
           </div>
 
-          <div>
+          <div id="inner2">
             <label for="bgcolor2">Background-Color :</label>
-            <input type="color" id="bgcolor2" value="#e0e6ff" />
           </div>
         </div>
 
@@ -177,8 +183,8 @@
 
     <footer>
       <img src="/Logo.jpeg" alt="INTERESTING Plus - Logo" />
-      <h1>INTERESTING Plus</h1>
-      <p>Jatin Poriya</p>
+      <h2>INTERESTING Plus</h2>
+      <p><a href="https://jatinporiya.netlify.app">Jatin Poriya</a></p>
     </footer>
 
     <style>
@@ -217,7 +223,7 @@
         font-family: "Roboto", sans-serif;
         text-shadow: 1px 1px 0px rgb(246, 74, 255);
       }
-      h1 span {
+      h1 strong {
         font-weight: 600;
         color: transparent;
         background: linear-gradient(
@@ -308,12 +314,30 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
       }
       .controls > div {
         display: flex;
         gap: 2rem;
         align-items: center;
         user-select: none;
+        width: 100%;
+      }
+      .controls div {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        text-wrap: nowrap;
+        gap: 1rem;
+      }
+      .controls .radius {
+        width: 50%;
+        text-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-right: 2rem;
       }
 
       table {
@@ -379,6 +403,15 @@
         cursor: grab;
       }
 
+      input[type="text"] {
+        max-width: 2rem;
+        border-radius: 20px;
+        padding: 5px;
+        border: 2px solid #fff;
+      }
+      .clr-color {
+        max-width: fit-content !important;
+      }
       input[type="checkbox"] {
         scale: 1.5;
       }
@@ -559,19 +592,23 @@
         width: 80px;
         border-radius: 50%;
       }
-      footer h1 {
+      footer h2 {
         color: transparent;
         background: linear-gradient(to top right, #ffa200, rgb(255, 94, 0));
         background-clip: text;
         -webkit-background-clip: text;
         text-shadow: none;
-      text-align: center;
         margin-top: 0.5rem;
         max-width: fit-content;
+        font-size: 2.5rem;
       }
       footer p {
         margin-top: 0.5rem;
         color: #fff;
+      }
+      footer p a {
+        color: #fff;
+        text-decoration: none;
       }
 
       @media screen and (width < 940px) {
@@ -609,6 +646,9 @@
         }
         .controls label {
           margin-right: 1rem;
+        }
+        .controls .radius {
+          width: 100%;
         }
 
         main {
@@ -671,7 +711,7 @@
           font-size: 0.8rem;
         }
 
-        footer h1 {
+        footer h2 {
           font-size: 2rem;
         }
       }
@@ -708,6 +748,14 @@
       });
 
       document.addEventListener("DOMContentLoaded", () => {
+        //  Custom Color Picker Integration
+        document.getElementById(
+          "inner1"
+        ).innerHTML += `<input type="text" id="bgcolor" value="#ff6b6b" class="input-bg" data-coloris /> <input type="text" id="bgcolor1" value="#f5f5f5" class="input-bg" data-coloris />`;
+        document.getElementById(
+          "inner2"
+        ).innerHTML += `<input type="text" id="bgcolor2" value="#e0e6ff" class="input-bg" data-coloris />`;
+
         const box = document.querySelector(".box");
 
         const controls = [
@@ -748,6 +796,12 @@
             boxShadow ? " box-shadow:" : " "
           } ${boxShadow}${boxShadow ? ";" : ""} }`;
           Prism.highlightElement(code);
+
+          // Update Background Color
+          document.querySelectorAll(".input-bg").forEach((input) => {
+            input.style.background = input.value;
+            input.style.color = input.value;
+          });
         }
 
         // Update on Delete Row
@@ -770,7 +824,7 @@
                 <td><input type="range" min="-200" max="200" value="8" data-index="${shadows.length}" data-type="y" /></td>
                 <td><input type="range" min="0" max="200" value="16" data-index="${shadows.length}" data-type="blur" /></td>
                 <td><input type="range" min="-100" max="100" value="0" data-index="${shadows.length}" data-type="spread" /></td>
-                <td><input type="color" value="#949494" data-index="${shadows.length}" data-type="color" /></td>
+                <td><input type="text" value="#949494" data-type="color" data-index="${shadows.length}" class="input-bg" data-coloris /></td>
                 <td><button data-index="${shadows.length}">Delete</button></td>
               `;
 
@@ -828,6 +882,28 @@
         copy.addEventListener("click", () => {
           navigator.clipboard.writeText(code.textContent);
         });
+      });
+
+      // Custom Color Picker
+      Coloris({
+        //  parent: ".container",
+        // el: ".color-field",
+        theme: "default",
+        themeMode: "light",
+        format: "hex",
+        swatches: [
+          "#264653",
+          "#2a9d8f",
+          "#e9c46a",
+          "rgb(244,162,97)",
+          "#e76f51",
+          "#d62828",
+          "navy",
+          "#07b",
+          "#0096c7",
+          "#00b4d8",
+          "rgba(0,119,182)",
+        ],
       });
     </script>
   </body>
