@@ -1,0 +1,915 @@
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO - Meta Tags -->
+
+    <meta
+      name="description"
+      content="Create and customize box shadow properties with our CSS Box Shadow Tool. Generate, edit, and visualize CSS box shadows for your web design projects."
+    />
+    <meta
+      name="keywords"
+      content="CSS Box Shadow Tool, Multiple Box Shadow Generator, CSS Box Shadow Generator, Box Shadow CSS Generator, Online CSS Box Shadow Tool, Box Shadow Creator, Box Shadow Editor, Generate Box Shadow CSS, CSS Shadow Generator, Box Shadow Customizer, Box Shadow Design Tool, How to create box shadows in CSS, Realistic box shadow generator, Free CSS box shadow generator online, Best box shadow generator for web developers, Customize box shadow properties online, CSS tool for box shadows, Web design tools CSS box shadow, Dynamic box shadow creation, Box shadow code generator, Interactive box shadow generator, Web development tools, Frontend developer tools, Design shadow effects CSS, Visual CSS tools, Box shadow property editor, Jatin Poriya, INTERESTING Plus, Web Development Tools, Frontend Tools"
+    />
+    <meta name="author" content="Jatin Poriya" />
+    <meta
+      property="og:title"
+      content="CSS Box Shadow Tool | Jatin Poriya's Web Projects"
+    />
+    <meta
+      property="og:description"
+      content="Create and customize box shadow properties with ease. Generate, edit, and visualize CSS box shadows for your web design projects."
+    />
+    <meta
+      property="og:url"
+      content="https://web-projects-ui.netlify.app/Web-Tools/CSS-Box-Shadow-Generator"
+    />
+    <meta
+      property="og:image"
+      content="https://web-projects-ui.netlify.app/Web-Tools/CSS-Box-Shadow-Generator/hero.jpeg"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="CSS Box Shadow Tool | Jatin Poriya's Web Projects"
+    />
+    <meta
+      name="twitter:description"
+      content="Create and customize box shadow properties with ease. Generate, edit, and visualize CSS box shadows for your web design projects."
+    />
+    <meta
+      name="twitter:image"
+      content="https://web-projects-ui.netlify.app/Web-Tools/CSS-Box-Shadow-Generator/hero.jpeg"
+    />
+    <title>CSS Box Shadow Tool | Jatin Poriya's Web Projects</title>
+    <link
+      rel="canonical"
+      href="https://web-projects-ui.netlify.app/Web-Tools/CSS-Box-Shadow-Generator"
+    />
+
+    <link rel="icon" href="/Logo.jpeg" type="image/x-icon" />
+
+    <!-- SEO - End -->
+
+    <!-- Custom Color Picker CDN Start -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+    <!-- Custom Color Picker CDN End -->
+
+    <!-- ColourFull CSS Code CDN Start -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <!-- ColourFull CSS Code CDN End -->
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Quicksand:wght@400;700&family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <div>
+        <h1>CSS <strong>Box Shadow</strong> Generator</h1>
+        <p>
+          Enhance your web designs with custom box shadows effortlessly. Our CSS
+          Box Shadow Generator tool allows you to create and preview
+          <span> mutliple stylish shadow </span> effects for your web elements
+          in real-time.
+          <br />
+          <br />
+          Make your web elements stand out with beautifully crafted shadows.
+          <span class="now"> Start creating NOW!</span>
+        </p>
+      </div>
+      <div id="box" class="box">.box</div>
+    </section>
+
+    <main>
+      <div class="controls">
+        <div>
+          <div class="radius">
+            <label for="radius">Radius :</label>
+            <input type="range" id="radius" min="0" max="100" value="20" />
+          </div>
+
+          <div id="inner1">
+            <label for="bgcolor">Color :</label>
+          </div>
+
+          <div id="inner2">
+            <label for="bgcolor2">Background-Color :</label>
+          </div>
+        </div>
+
+        <button id="addBtn">Add Box Shadow</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Inset</th>
+            <th>X</th>
+            <th>Y</th>
+            <th>Blur</th>
+            <th>Spread</th>
+            <th>Color</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody></tbody>
+      </table>
+
+      <pre>
+        <button id="copy">Copy</button>
+        <code class="language-css">
+          .box { width: 300px; height: 300px; background: linear-gradient(45deg,
+            #ff6b6b, #f5f5f5); border-radius: 20px; }
+          </code>
+        </pre>
+    </main>
+
+    <section class="features">
+      <h2>Key Features:</h2>
+
+      <h3>Dynamic Customization:</h3>
+      <p>
+        Easily adjust shadow properties such as offset, blur radius, spread
+        radius, and color to create the perfect shadow effect.
+      </p>
+      <h3>Real-Time Preview:</h3>
+      <p>
+        Instantly see how your changes affect the appearance of the shadow,
+        making it easy to fine-tune the design.
+      </p>
+
+      <h3>CSS Code Generation:</h3>
+      <p>
+        Get the corresponding CSS code for your custom box shadow, ready to be
+        copied and pasted into your project.
+      </p>
+
+      <h2>How to Use:</h2>
+
+      <h3>Adjust Shadow Properties:</h3>
+      <p>
+        Use the sliders and input fields to modify the shadow's offset, blur,
+        spread, and color.
+      </p>
+
+      <h3>Preview Changes:</h3>
+      <p>
+        Watch the sample element update in real-time as you adjust the settings.
+      </p>
+
+      <h3>Copy CSS Code:</h3>
+      <p>
+        Once satisfied with the shadow effect, simply copy the generated CSS
+        code and paste it into your stylesheet. Make your web elements stand out
+        with beautifully crafted shadows. Start creating now!
+      </p>
+    </section>
+
+    <footer>
+      <img src="/Logo.jpeg" alt="INTERESTING Plus - Logo" />
+      <h2>INTERESTING Plus</h2>
+      <p><a href="https://jatinporiya.netlify.app">Jatin Poriya</a></p>
+    </footer>
+
+    <style>
+      /* font-family: "Montserrat", sans-serif; */
+      /* font-family: "Roboto", sans-serif; */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100dvh;
+        background: #e0e6ff;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 12rem 2rem 8rem;
+        gap: 8rem;
+      }
+      .container h1,
+      p {
+        text-align: left;
+        font-weight: 600;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-top: 2rem;
+        line-height: 3rem;
+        font-weight: 600;
+        color: rgb(32, 6, 84);
+        /* font-family: "Raleway", sans-serif; */
+        font-family: "Roboto", sans-serif;
+        text-shadow: 1px 1px 0px rgb(246, 74, 255);
+      }
+      h1 strong {
+        font-weight: 600;
+        color: transparent;
+        background: linear-gradient(
+          to top,
+          rgb(207, 0, 0),
+          rgb(255, 72, 0),
+          rgb(209, 0, 129),
+          rgb(192, 0, 163),
+          rgb(0, 140, 255)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-shadow: none;
+      }
+      p {
+        font-size: 1.3rem;
+        margin-top: 1.6rem;
+        color: #053b79af;
+      }
+      p span {
+        color: transparent;
+        background: linear-gradient(to right, #ba5b21, #ff6607, #d38c08);
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+      p span.now {
+        color: transparent;
+        background: linear-gradient(to right, #188dd1, #086ff6, #8c4af5);
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+      #box {
+        width: 200px;
+        min-width: 200px;
+        height: 200px;
+        background: linear-gradient(45deg, #ff6b6b, #f5f5f5);
+        border-radius: 20px;
+
+        display: grid;
+        place-items: center;
+
+        font-size: 2rem;
+        text-align: center;
+        color: #fff;
+        font-weight: 900;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      code.language-css {
+        text-wrap: wrap;
+        font-size: 0.9rem;
+        max-width: 100%;
+      }
+      pre {
+        border: 2px solid #ffc7c795;
+        border-radius: 10px;
+        text-shadow: 1px 1px 0px rgb(238, 43, 249);
+      }
+
+      main {
+        margin: 2rem;
+        padding: 1.2rem 3rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        border: none;
+        border-radius: 10px;
+
+        color: #fff;
+        background: linear-gradient(
+          to top right,
+          #070c21,
+          #121f5b,
+          #0e5ea9 90%,
+          #0361bf 95%
+        );
+        box-shadow: 0 0 10px 10px solid black;
+        text-shadow: 1px 1px 0px rgb(186, 74, 255);
+
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      .controls > div {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        user-select: none;
+        width: 100%;
+      }
+      .controls div {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        text-wrap: nowrap;
+        gap: 1rem;
+      }
+      .controls .radius {
+        width: 50%;
+        text-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-right: 2rem;
+      }
+
+      table {
+        border-collapse: collapse;
+        user-select: none;
+      }
+      tr:nth-of-type(2n) {
+        background: linear-gradient(to right, rgba(3, 6, 35, 0.559), #01265067);
+      }
+      tr:nth-of-type(2n) td {
+        border-color: #ffffff42;
+      }
+      th,
+      td {
+        border: 2px solid #ffffff42;
+        padding: 10px;
+        text-align: center;
+      }
+
+      #addBtn {
+        background: linear-gradient(greenyellow, rgb(255, 231, 47));
+        box-shadow: inset 2px -2px 5px 0px #bf6313, 8px 8px 16px 0px #3b1c1c5b;
+        color: #5c0370;
+
+        padding: 0.5rem 1.5rem;
+        font-size: 1.1rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        cursor: grab;
+        text-wrap: nowrap;
+        max-width: fit-content;
+        transition: 0.3s all;
+      }
+      #addBtn:hover {
+        color: #103c69;
+        background: linear-gradient(greenyellow, rgb(255, 231, 47));
+        box-shadow: inset -2px 2px 5px 0px #bf6313,
+          inset 2px -2px 5px 0px #ffffff, 3px 3px 16px 0px #beba75a5;
+      }
+      #copy {
+        padding: 0.5rem 1rem;
+        font-weight: 900;
+        font-family: "Courier New", Courier, monospace;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        background: linear-gradient(rgb(47, 255, 248), rgb(47, 196, 255));
+        box-shadow: inset 2px -2px 5px 0px #0276fcac;
+        color: #6a0880;
+        transition: 0.3s all;
+      }
+      #copy:hover {
+        background: linear-gradient(rgb(47, 255, 248), rgb(47, 196, 255));
+        box-shadow: inset 2px -2px 5px 0px #0276fcac;
+        color: #6a0880;
+      }
+
+      input {
+        cursor: grab;
+      }
+
+      input[type="text"] {
+        max-width: 2rem;
+        border-radius: 20px;
+        padding: 5px;
+        border: 2px solid #fff;
+      }
+      .clr-color {
+        max-width: fit-content !important;
+      }
+      input[type="checkbox"] {
+        scale: 1.5;
+      }
+      tr button {
+        color: #fff;
+        background: linear-gradient(rgb(255, 22, 22), rgb(255, 84, 27));
+        box-shadow: inset 2px -2px 5px 0px #900308,
+          inset -2px 2px 5px 0px #fcb9b9;
+        padding: 0.5rem 1.3rem;
+        border: none;
+        border-radius: 30px;
+        cursor: grab;
+        text-wrap: nowrap;
+        max-width: fit-content;
+        transition: 0.3s all;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 900;
+        font-size: 1rem;
+      }
+      tr button:hover {
+        background: linear-gradient(rgb(255, 4, 4), rgb(255, 99, 47));
+        box-shadow: inset -2px 2px 5px 0px #900308,
+          inset 2px -2px 5px 0px #fcb9b9, 3px 3px 16px 0px #beba75a5;
+      }
+
+      /* font-family: "Pacifico", cursive; */
+
+      /* Custom INPUT Styles */
+      /* Checkbox */
+      input[type="checkbox"] {
+        -webkit-appearance: none; /* Remove default appearance */
+        appearance: none; /* Remove default appearance */
+        width: 20px;
+        height: 20px;
+        background-color: #8dbcc4;
+        border: 2px solid #ffffff;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+      }
+      input[type="checkbox"]:checked {
+        background-color: #ff8800;
+        border: 2px solid #ffffffa9;
+      }
+      input[type="checkbox"]:checked::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+
+      /* Range */
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(
+          to right,
+          rgb(255, 0, 204),
+          #ff5309,
+          rgb(255, 0, 132),
+          #ff9412
+        );
+        border-radius: 4px;
+        outline: none;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #3ec91f;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: #007bff;
+        border: 2px solid #333;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      /* Color */
+      input[type="color"] {
+        -webkit-appearance: none; /* Remove default appearance */
+        appearance: none; /* Remove default appearance */
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+      }
+      input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+      }
+      input[type="color"]::-webkit-color-swatch {
+        border: 2px solid #fff;
+        border-radius: 8px;
+      }
+      input[type="color"]::-moz-color-swatch {
+        border: 2px solid #fff;
+        border-radius: 8px;
+      }
+      input[type="color"]::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #007bff, #00ff7f);
+        border-radius: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      .controls input[type="color"] {
+        transform: translateY(10px);
+      }
+
+      /* Features */
+      .features {
+        padding: 6rem;
+        background: #e0e6ff;
+      }
+      .features h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: transparent;
+        background: linear-gradient(
+          to top right,
+          rgb(63, 17, 157),
+          rgb(184, 109, 245),
+          rgb(255, 151, 66)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        max-width: fit-content;
+      }
+      .features h3 {
+        font-size: 1.6rem;
+        color: #103f7d;
+      }
+      .features p {
+        margin-top: 0.2rem;
+        margin-bottom: 1rem;
+        color: #033671a4;
+      }
+
+      /* Footer Start */
+      footer {
+        background: linear-gradient(
+          to bottom right,
+          #063c71,
+          #07235b,
+          #07195d,
+          #020a28
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+      }
+      footer img {
+        width: 80px;
+        border-radius: 50%;
+      }
+      footer h2 {
+        color: transparent;
+        background: linear-gradient(to top right, #ffa200, rgb(255, 94, 0));
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-shadow: none;
+        margin-top: 0.5rem;
+        max-width: fit-content;
+        font-size: 2.5rem;
+      }
+      footer p {
+        margin-top: 0.5rem;
+        color: #fff;
+      }
+      footer p a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      @media screen and (width < 940px) {
+        body {
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+        input[type="range"] {
+          width: 60%;
+        }
+        .container {
+          flex-direction: column;
+          justify-content: center;
+          max-width: 100vw;
+          padding: 2rem;
+          padding-bottom: 5rem;
+          gap: 5rem;
+        }
+        .container h1 {
+          font-size: 2.2rem;
+        }
+        .container p {
+          font-size: 1rem;
+          color: #074081e5;
+        }
+
+        .controls {
+          flex-direction: column;
+        }
+        .controls > div {
+          margin-top: 1rem;
+          flex-direction: column;
+          align-items: start;
+          gap: 1rem;
+        }
+        .controls label {
+          margin-right: 1rem;
+        }
+        .controls .radius {
+          width: 100%;
+        }
+
+        main {
+          margin: 0;
+          padding: 1rem 1rem;
+
+          border-radius: 0;
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+
+        #addBtn {
+          margin-block: 1.5rem;
+        }
+        th {
+          display: none;
+        }
+        tr td {
+          display: flex;
+          padding-left: 2rem;
+          align-items: center;
+        }
+        td::before {
+          padding-right: 0.8rem;
+        }
+        td:nth-child(1)::before {
+          content: "Inset : ";
+        }
+        td:nth-child(2)::before {
+          content: "X : ";
+        }
+        td:nth-child(3)::before {
+          content: "Y : ";
+        }
+        td:nth-child(4)::before {
+          content: "Blur : ";
+        }
+        td:nth-child(5)::before {
+          content: "Spread : ";
+        }
+        td:nth-child(6)::before {
+          content: "Color : ";
+        }
+        tr:nth-of-type(2n) {
+          border-top: #d8cfcf;
+        }
+
+        .features {
+          padding: 1.3rem;
+        }
+        .features h2 {
+          font-size: 2.1rem;
+          text-wrap: nowrap;
+          margin-top: 6rem;
+        }
+        .features h3 {
+          font-size: 1.3rem;
+        }
+        .features p {
+          font-size: 0.8rem;
+        }
+
+        footer h2 {
+          font-size: 2rem;
+        }
+      }
+      @media screen and (height > 1500px) {
+        h1 {
+          font-size: 1.5rem !important;
+        }
+        p {
+          font-size: 0.58rem;
+        }
+        .container {
+          padding: 5rem;
+        }
+
+        /* Features */
+        .features {
+          padding: 5rem;
+        }
+        .features h2 {
+          font-size: 4rem;
+          text-wrap: nowrap;
+          margin-top: 6rem;
+        }
+        .features h3 {
+          font-size: 0.75rem;
+        }
+      }
+    </style>
+
+    <script>
+      window.addEventListener("beforeunload", (event) => {
+        event.preventDefault();
+        event.returnValue = "";
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        //  Custom Color Picker Integration
+        document.getElementById(
+          "inner1"
+        ).innerHTML += `<input type="text" id="bgcolor" value="#ff6b6b" class="input-bg" data-coloris /> <input type="text" id="bgcolor1" value="#f5f5f5" class="input-bg" data-coloris />`;
+        document.getElementById(
+          "inner2"
+        ).innerHTML += `<input type="text" id="bgcolor2" value="#e0e6ff" class="input-bg" data-coloris />`;
+
+        const box = document.querySelector(".box");
+
+        const controls = [
+          document.getElementById("radius"),
+          document.getElementById("bgcolor"),
+          document.getElementById("bgcolor1"),
+          document.getElementById("bgcolor2"),
+        ];
+
+        controls.forEach((input) => {
+          input.addEventListener("input", updateBoxShadow);
+        });
+
+        const table = document.querySelector("tbody"),
+          addBtn = document.getElementById("addBtn"),
+          code = document.querySelector("code.language-css"),
+          shadows = [];
+
+        // Display Box Shadow Code & Update the Box Styles
+        function updateBoxShadow() {
+          let boxShadow = shadows
+            .map(
+              (shadow) =>
+                `${shadow.inset} ${shadow.x}px ${shadow.y}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}`
+            )
+            .join(", ");
+
+          // CSS
+          box.style.boxShadow = boxShadow;
+          box.style.borderRadius = `${radius.value}px`;
+          box.style.background = `linear-gradient(45deg, ${bgcolor.value}, ${bgcolor1.value})`;
+          document.body.style.background = bgcolor2.value;
+
+          // Source Code
+          code.textContent = `.box { width: 300px; height: 300px; background: linear-gradient(45deg, ${
+            bgcolor.value
+          }, ${bgcolor1.value}); border-radius: ${radius.value}px;${
+            boxShadow ? " box-shadow:" : " "
+          } ${boxShadow}${boxShadow ? ";" : ""} }`;
+          Prism.highlightElement(code);
+
+          // Update Background Color
+          document.querySelectorAll(".input-bg").forEach((input) => {
+            input.style.background = input.value;
+            input.style.color = input.value;
+          });
+        }
+
+        // Update on Delete Row
+        function updateIndices() {
+          Array.from(table.rows).forEach((row, index) => {
+            row.querySelectorAll("input").forEach((input) => {
+              input.setAttribute("data-index", index);
+            });
+            row.querySelector("button").setAttribute("data-index", index);
+          });
+        }
+
+        // Add Raws
+        function addRow() {
+          const row = document.createElement("tr");
+
+          row.innerHTML = `
+                <td><input type="checkbox" data-index="${shadows.length}" data-type="inset" /></td>
+                <td><input type="range" min="-200" max="200" value="8" data-index="${shadows.length}" data-type="x" /></td>
+                <td><input type="range" min="-200" max="200" value="8" data-index="${shadows.length}" data-type="y" /></td>
+                <td><input type="range" min="0" max="200" value="16" data-index="${shadows.length}" data-type="blur" /></td>
+                <td><input type="range" min="-100" max="100" value="0" data-index="${shadows.length}" data-type="spread" /></td>
+                <td><input type="text" value="#949494" data-type="color" data-index="${shadows.length}" class="input-bg" data-coloris /></td>
+                <td><button data-index="${shadows.length}">Delete</button></td>
+              `;
+
+          table.appendChild(row);
+          shadows.push({
+            inset: "",
+            x: 8,
+            y: 8,
+            blur: 16,
+            spread: 0,
+            color: "#949494",
+          });
+          updateBoxShadow();
+
+          row.querySelectorAll("input").forEach((input) => {
+            input.addEventListener("input", (e) => {
+              updateValues(e);
+            });
+
+            function updateValues(e) {
+              const index = e.target.getAttribute("data-index");
+              const type = e.target.getAttribute("data-type");
+              shadows[index][type] = ifInset();
+
+              function ifInset() {
+                if (type == "inset") {
+                  if (e.target.checked) {
+                    return "inset";
+                  } else {
+                    return "";
+                  }
+                } else {
+                  return e.target.value;
+                }
+              }
+
+              updateBoxShadow();
+            }
+          });
+
+          row.querySelector("button").addEventListener("click", (e) => {
+            const index = e.target.getAttribute("data-index");
+            shadows.splice(index, 1);
+            table.removeChild(row);
+            updateIndices();
+            updateBoxShadow();
+          });
+        }
+
+        // Add Button
+        addRow();
+        addBtn.addEventListener("click", addRow);
+
+        // Copy
+        copy.addEventListener("click", () => {
+          navigator.clipboard.writeText(code.textContent);
+        });
+      });
+
+      // Custom Color Picker
+      Coloris({
+        //  parent: ".container",
+        // el: ".color-field",
+        theme: "default",
+        themeMode: "light",
+        format: "hex",
+        swatches: [
+          "#264653",
+          "#2a9d8f",
+          "#e9c46a",
+          "rgb(244,162,97)",
+          "#e76f51",
+          "#d62828",
+          "navy",
+          "#07b",
+          "#0096c7",
+          "#00b4d8",
+          "rgba(0,119,182)",
+        ],
+      });
+    </script>
+  </body>
+</html>
+ -->
