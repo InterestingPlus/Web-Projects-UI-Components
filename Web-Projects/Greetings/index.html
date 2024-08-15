@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Simple Greeting using JavaScript Date()</title>
+</head>
+
+<body>
+  
+<section>
+  <h1>Greetings</h1>
+  <br>
+  <form>
+  <input type="text" placeholder="Enter Your Name" oninput="handleDisable()">
+  <button type="submit">Go</button>
+  </form>
+  <br>
+  <p></p>
+</section>
+
+<div class="shape"></div>
+  
+
+  <script>
+    
+    let input = document.querySelector('input').value;
+let p = document.querySelector('p');
+document.querySelector("button").disabled = true;
+
+document.querySelector("form").addEventListener("submit",(e)=>{
+  e.preventDefault();
+  
+  document.querySelector('p').style.paddingBlock = '20px';
+  
+  
+  let name = document.querySelector('input').value;
+  let greet;
+  
+ // 00:00 - 05:59: "Good Night"
+ // 06:00 - 11:59: "Good Morning"
+ // 12:00 - 16:59: "Good Afternoon"
+ // 17:00 - 20:59: "Good Evening"
+ // 21:00 - 23:59: "Good Night"
+
+let time = new Date().getHours();
+  
+  if(time >= 0 && time <= 6){
+    greet = "😴 Good Night";
+  }
+  else if(time > 6 && time <= 12){
+    greet = "🌅 Good Morning";
+  }
+  else if (time > 12 && time <= 17) {
+    greet = "🌞 Good Afternoon";
+  }
+  else if (time > 17 && time <= 21) {
+    greet = "🌆 Good Evening";
+  }
+  else if (time > 21 && time <= 24) {
+    greet = "😴 Good Night";
+  }
+  p.innerText = `${greet}, ${name}`
+});
+
+function handleDisable(){
+  input = document.querySelector('input').value;
+  if(!input){
+    document.querySelector("button").disabled = true;
+  }
+  else {
+    document.querySelector("button").disabled = false;
+  }
+}
+    
+  </script>
+  
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-size: 15pt;
+    display: grid;
+    place-items: center;
+    max-width: 100vw;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #6dff41, #00aeff);
+    color: #fff;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  border: 2px solid #fff8f866;
+  padding: 20px;
+  max-width: 90vw;
+  backdrop-filter: blur(9px);
+  background: #ffffff2e;
+  position: relative;
+  z-index: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1rem;
+}
+
+input {
+  padding: 10px 20px;
+  border-radius: 20px;
+  max-width: 80vw;
+}
+
+button {
+  color: #fff;
+  background: linear-gradient(to top right, #000080, #40ebd2);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 900;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+button:disabled {
+  color: #fff8f866;
+  background: linear-gradient(to top right, #5eb7c6, #b1da9d);
+}
+
+.shape {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background: linear-gradient(-45deg , #e9c46a, #ff3838);
+  position: absolute;
+  z-index: -1;
+  top: 60%;
+  right: 50%;
+  
+  animation: anim 4s infinite;
+  
+}
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #fff;
+}
+p {
+  text-align: center;
+  width: 90vw;
+  color: darkviolet;
+  background: #fff;
+  padding-block: 0;
+}
+
+@keyframes anim{
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@media screen and (min-width: 700px){
+  .shape {
+    left: 30%;
+    top: 52%;
+    transform: translate(-50%, -50%)
+  }
+  p {
+    width: 100%;
+  }
+  section {
+    max-width: fit-content;
+  }
+}
+
+  </style>
+</body>
+</html>
