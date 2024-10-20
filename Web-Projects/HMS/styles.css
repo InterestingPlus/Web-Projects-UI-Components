@@ -47,7 +47,7 @@ header nav ul li a {
 
 /* Hero Section Styling */
 #hero {
-  background-image: url("https://via.placeholder.com/1200x400");
+  background: url("images/Banner.jpg");
   background-size: cover;
   background-position: center;
   color: white;
