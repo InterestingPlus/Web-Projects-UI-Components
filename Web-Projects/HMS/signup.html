@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Hospital Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Hospital Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="patients.html">Patients</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sign-Up Form Section -->
+    <section id="signup">
+        <div class="container">
+            <h2>Create an Account</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Sign Up As:</label>
+                    <select id="role" name="role" required>
+                        <option value="patient">Patient</option>
+                        <option value="doctor">Doctor</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hospital Management System. All rights reserved.</p>
+            <p>Contact us: (123) 456-7890 | email@example.com</p>
+        </div>
+    </footer>
+</body>
+</html>

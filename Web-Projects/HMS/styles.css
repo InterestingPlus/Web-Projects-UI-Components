@@ -1,0 +1,336 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero Section Styling */
+#hero {
+  background-image: url("https://via.placeholder.com/1200x400");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+#hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+#hero .btn {
+  background-color: #ff5722;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/* Services Section Styling */
+#services {
+  padding: 60px 0;
+  text-align: center;
+}
+
+#services h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-cards .card {
+  background-color: white;
+  width: 300px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.service-cards .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-cards .card h3 {
+  padding: 20px 0 10px;
+}
+
+.service-cards .card p {
+  padding: 0 20px 20px;
+}
+
+/* Testimonials Section Styling */
+#testimonials {
+  background-color: #f0f0f0;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#testimonials h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-cards .testimonial {
+  background-color: white;
+  width: 400px;
+  margin: 15px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-cards .testimonial p {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-cards .testimonial h4 {
+  text-align: right;
+  color: #555;
+}
+
+/* Doctors Section Styling */
+#doctors {
+  padding: 60px 0;
+  text-align: center;
+}
+
+#doctors h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.doctor-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.doctor-cards .card {
+  background-color: white;
+  width: 300px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.doctor-cards .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.doctor-cards .card h3 {
+  padding: 20px 0 10px;
+}
+
+.doctor-cards .card p {
+  padding: 0 20px 20px;
+}
+
+/* Patients Section Styling */
+#patients {
+  padding: 60px 0;
+  text-align: center;
+}
+
+#patients h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 12px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Sign-Up Form Section Styling */
+#signup,
+#login {
+  padding: 60px 0;
+  text-align: center;
+}
+
+#signup h2,
+#login h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+#login p {
+  margin-top: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.btn:hover {
+  background-color: #45a049;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header .container,
+  #hero .container,
+  #services .container,
+  #testimonials .container,
+  footer .container {
+    width: 95%;
+  }
+
+  .service-cards,
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+}
