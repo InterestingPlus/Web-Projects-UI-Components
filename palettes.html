@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palettes</title>
+  <style>
+    .color-swatch {
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+      border-radius: 5px;
+      text-align: center;
+      line-height: 50px;
+      color: #fff;
+      font-size: 12px;
+      font-family: sans-serif;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      font-weight: 900;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .black span {
+      color: #000 !important;
+      font-weight: 900 !important;
+    }
+    .palette-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="palette-title">Solid Colors</div>
+  <div class="container">
+    <!-- Add color swatches below -->
+    <span class="color-swatch" style="background: #1E88E5;">#1E88E5</span>
+    <span class="color-swatch" style="background: #43A047;">#43A047</span>
+    <span class="color-swatch" style="background: #E53935;">#E53935</span>
+    <span class="color-swatch" style="background: #FFC107;">#FFC107</span>
+    <span class="color-swatch" style="background: #8E24AA;">#8E24AA</span>
+    <span class="color-swatch" style="background: #FDD835;">#FDD835</span>
+    <span class="color-swatch" style="background: #3949AB;">#3949AB</span>
+    <span class="color-swatch" style="background: #00ACC1;">#00ACC1</span>
+    <span class="color-swatch" style="background: #EF5350;">#EF5350</span>
+    <span class="color-swatch" style="background: #4CAF50;">#4CAF50</span>
+  </div>
+
+  <div class="palette-title">Gradient Backgrounds</div>
+  <div class="container">
+    <span class="color-swatch" style="background: linear-gradient(90deg, #1E88E5, #3949AB);">#1E88E5 → #3949AB</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #43A047, #8E24AA);">#43A047 → #8E24AA</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #E53935, #FFC107);">#E53935 → #FFC107</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #00ACC1, #EF5350);">#00ACC1 → #EF5350</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #4CAF50, #FDD835);">#4CAF50 → #FDD835</span>
+  </div>
+
+  <div class="palette-title">Text Colors</div>
+  <div class="container">
+    <span class="color-swatch" style="background: #FFFFFF; color: #1E88E5;">#1E88E5</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #43A047;">#43A047</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #E53935;">#E53935</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #FFC107;">#FFC107</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #8E24AA;">#8E24AA</span>
+  </div>
+
+  <div class="palette-title">Button Gradients</div>
+  <div class="container">
+    <span class="color-swatch" style="background: linear-gradient(90deg, #3949AB, #1E88E5);">#3949AB → #1E88E5</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #4CAF50, #43A047);">#4CAF50 → #43A047</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #FFC107, #FDD835);">#FFC107 → #FDD835</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #8E24AA, #EF5350);">#8E24AA → #EF5350</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #00ACC1, #4CAF50);">#00ACC1 → #4CAF50</span>
+  </div>
+  
+  
+  
+  <hr />
+  
+  <div class="palette-title">Light Solid Colors</div>
+  <div class="container black">
+    <span class="color-swatch" style="background: #E3F2FD;">#E3F2FD</span>
+    <span class="color-swatch" style="background: #F1F8E9;">#F1F8E9</span>
+    <span class="color-swatch" style="background: #FFF3E0;">#FFF3E0</span>
+    <span class="color-swatch" style="background: #FCE4EC;">#FCE4EC</span>
+    <span class="color-swatch" style="background: #ECEFF1;">#ECEFF1</span>
+    <span class="color-swatch" style="background: #F9FBE7;">#F9FBE7</span>
+    <span class="color-swatch" style="background: #E8EAF6;">#E8EAF6</span>
+    <span class="color-swatch" style="background: #FBE9E7;">#FBE9E7</span>
+    <span class="color-swatch" style="background: #FFF8E1;">#FFF8E1</span>
+    <span class="color-swatch" style="background: #FAFAFA;">#FAFAFA</span>
+  </div>
+  
+  <div class="palette-title">Light Gradient Backgrounds</div>
+  <div class="container black">
+    <span class="color-swatch" style="background: linear-gradient(90deg, #E3F2FD, #F1F8E9);">#E3F2FD → #F1F8E9</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #FFF3E0, #FCE4EC);">#FFF3E0 → #FCE4EC</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #ECEFF1, #F9FBE7);">#ECEFF1 → #F9FBE7</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #E8EAF6, #FBE9E7);">#E8EAF6 → #FBE9E7</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #FFF8E1, #FAFAFA);">#FFF8E1 → #FAFAFA</span>
+  </div>
+  
+  <div class="palette-title">Light Button Gradients</div>
+  <div class="container black">
+    <span class="color-swatch" style="background: linear-gradient(90deg, #E3F2FD, #ECEFF1);">#E3F2FD → #ECEFF1</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #F1F8E9, #FFF3E0);">#F1F8E9 → #FFF3E0</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #FCE4EC, #F9FBE7);">#FCE4EC → #F9FBE7</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #E8EAF6, #FFF8E1);">#E8EAF6 → #FFF8E1</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #FBE9E7, #FAFAFA);">#FBE9E7 → #FAFAFA</span>
+  </div>
+  
+  <div class="palette-title">Text Colors</div>
+  <div class="container black">
+    <span class="color-swatch" style="background: #FFFFFF; color: #757575;">#757575</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #9E9E9E;">#9E9E9E</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #BDBDBD;">#BDBDBD</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #D6D6D6;">#D6D6D6</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #E0E0E0;">#E0E0E0</span>
+  </div>
+  
+  <hr/>
+  
+   <div class="palette-title">Medium Solid Colors</div>
+  <div class="container">
+    <span class="color-swatch" style="background: #64B5F6;">#64B5F6</span>
+    <span class="color-swatch" style="background: #81C784;">#81C784</span>
+    <span class="color-swatch" style="background: #FFD54F;">#FFD54F</span>
+    <span class="color-swatch" style="background: #FF8A65;">#FF8A65</span>
+    <span class="color-swatch" style="background: #90A4AE;">#90A4AE</span>
+    <span class="color-swatch" style="background: #AED581;">#AED581</span>
+    <span class="color-swatch" style="background: #4DB6AC;">#4DB6AC</span>
+    <span class="color-swatch" style="background: #BA68C8;">#BA68C8</span>
+    <span class="color-swatch" style="background: #7986CB;">#7986CB</span>
+    <span class="color-swatch" style="background: #FFB74D;">#FFB74D</span>
+  </div>
+
+  <div class="palette-title">Medium Gradient Backgrounds</div>
+  <div class="container">
+    <span class="color-swatch" style="background: linear-gradient(90deg, #64B5F6, #81C784);">#64B5F6 → #81C784</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #FFD54F, #FF8A65);">#FFD54F → #FF8A65</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #90A4AE, #AED581);">#90A4AE → #AED581</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #4DB6AC, #BA68C8);">#4DB6AC → #BA68C8</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #7986CB, #FFB74D);">#7986CB → #FFB74D</span>
+  </div>
+
+  <div class="palette-title">Button Gradients</div>
+  <div class="container">
+    <span class="color-swatch" style="background: linear-gradient(90deg, #64B5F6, #90A4AE);">#64B5F6 → #90A4AE</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #81C784, #FFD54F);">#81C784 → #FFD54F</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #FF8A65, #4DB6AC);">#FF8A65 → #4DB6AC</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #BA68C8, #7986CB);">#BA68C8 → #7986CB</span>
+    <span class="color-swatch" style="background: linear-gradient(90deg, #AED581, #FFB74D);">#AED581 → #FFB74D</span>
+  </div>
+
+  <div class="palette-title">Text Colors</div>
+  <div class="container">
+    <span class="color-swatch" style="background: #FFFFFF; color: #455A64;">#455A64</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #37474F;">#37474F</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #616161;">#616161</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #757575;">#757575</span>
+    <span class="color-swatch" style="background: #FFFFFF; color: #9E9E9E;">#9E9E9E</span>
+  </div>
+  
+</body>
+</html>
