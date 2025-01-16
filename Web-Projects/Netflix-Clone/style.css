@@ -1,0 +1,470 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  transition: 0.2s all ease-in-out;
+}
+
+body {
+  max-width: 100vw;
+}
+
+/* Header Start =============== */
+header {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  width: 100vw;
+  z-index: 9;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+  width: 100%;
+  padding-inline: 8rem;
+}
+header nav .logo {
+  width: 100px;
+}
+header nav .logo img {
+  width: 100%;
+}
+header nav .links {
+  display: flex;
+  gap: 1rem;
+}
+header nav .links select {
+  padding: 0.4rem 1rem;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 2rem;
+  backdrop-filter: blur(2px);
+}
+header nav .links select option {
+  background: #000;
+}
+header nav .links select:hover,
+header nav .links select:focus {
+  border: 2px solid #fff;
+}
+header nav .links button {
+  padding: 0.4rem 1rem;
+  color: #fff;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 2rem;
+}
+header nav .links button:hover {
+  background: rgb(156, 7, 7);
+}
+
+/* Header End ===============  */
+
+/* Main Start ===============  */
+main {
+  width: 100vw;
+  min-height: 100dvh;
+}
+main section#home {
+  width: 100%;
+  height: 100dvh;
+  color: #ffffffd0;
+
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/2f5a878d-bbce-451b-836a-398227a34fbf/web/IN-en-20241230-TRIFECTA-perspective_5ab944a5-1a71-4f6d-b341-8699d0491edd_large.jpg");
+
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+}
+main section#home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: radial-gradient(#1b1a168a, #000000ef);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+main section#home h1 {
+  font-size: 2.5rem;
+}
+main section#home h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+main section#home p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+main section#home div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 510px;
+  height: 50px;
+}
+main section#home div input {
+  width: 70%;
+  height: 100%;
+  border-radius: 6px;
+  border: 1px solid #ffffff9f;
+  background: #3636362c;
+  padding: 1rem;
+  backdrop-filter: blur(2px);
+  color: #fff;
+  font-size: 1rem;
+  white-space: nowrap;
+  font-weight: 500;
+}
+main section#home div button {
+  padding: 1rem;
+  width: 30%;
+  height: 100%;
+  border-radius: 6px;
+  border: none;
+  /* outline: none; */
+  color: #fff;
+  background: red;
+  font-size: 1rem;
+  white-space: nowrap;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+main section#home div button:hover {
+  background: #8a0707;
+}
+/* Main End =============== */
+
+/* Trending Start */
+main section#trending {
+  position: relative;
+  color: #fff;
+  background: black;
+
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+main section#trending .main {
+  padding-inline: 8rem;
+}
+main section#trending .main h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+main section#trending .main .filter {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 10px;
+  gap: 1rem;
+}
+main section#trending .main .filter select {
+  padding: 0.5rem 0.6rem;
+  color: #fff;
+  background: #181717;
+  border-radius: 6px;
+}
+
+main section#trending .effect {
+  position: relative;
+  transform: translateY(-90%);
+  overflow: hidden;
+  height: 10dvh;
+  z-index: 8;
+  background: black;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+  background: linear-gradient(
+    to right,
+    rgba(33, 13, 22, 1) 16%,
+    rgba(184, 40, 105, 1),
+    rgba(229, 9, 20, 1),
+    rgba(184, 40, 105, 1),
+    rgba(33, 13, 22, 1) 84%
+  );
+  padding: 1rem;
+}
+main section#trending .effect span {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  background: #000;
+  z-index: 1;
+  overflow: hidden;
+}
+main section#trending .effect span::before {
+  content: "";
+  position: absolute;
+  top: -160%;
+  left: 0;
+  width: 100%;
+  background: radial-gradient(
+    rgba(0, 119, 255, 0.336),
+    rgba(0, 119, 255, 0.082),
+    transparent,
+    transparent
+  );
+  height: 300%;
+  z-index: 2;
+}
+
+/* Trending Scroller */
+main section#trending .main .scroller {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+main section#trending .main .scroller .boxes {
+  scroll-snap-align: center;
+}
+main section#trending .main .scroller::-webkit-scrollbar {
+  background: #03011d;
+  height: 0.4rem;
+}
+main section#trending .main .scroller::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #ff0062, #ff5100);
+  border-radius: 10px;
+}
+main section#trending .main .scroller::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #ff1997, #ff6913);
+}
+main section#trending .main .scroller .boxes {
+  /* width: 180px;
+  height: 250px; */
+  min-width: 150px;
+  height: 210px;
+  background: var(--img);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 10px;
+  position: relative;
+  background-position: center;
+}
+main section#trending .main .scroller .boxes:hover {
+  background-size: 110%;
+}
+main section#trending .main .scroller .boxes span {
+  position: absolute;
+  left: -13%;
+  bottom: 1%;
+
+  font-size: 5rem;
+  font-weight: 700;
+  color: #000214;
+  -webkit-text-stroke: 1px white;
+}
+main
+  section#trending
+  .main
+  .scroller
+  .boxes:hover
+  ~ main
+  section#trending
+  .main
+  .scroller
+  .boxes
+  span {
+  scale: 1.1;
+}
+
+/* Trending End */
+
+/* Seasons Start */
+main section .seasons {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+main section .seasons .boxes {
+  display: flex;
+  gap: 1.5%;
+  width: 100%;
+  margin-top: 20px;
+}
+main section .seasons .boxes .box {
+  background: linear-gradient(149deg, #192247 0%, #210e17 99.08%);
+  width: 24%;
+  max-width: 24%;
+  min-height: 260px;
+  padding: 1rem;
+  border-radius: 15px;
+
+  position: relative;
+  cursor: pointer;
+}
+main section .seasons .boxes .box:hover {
+  scale: 1.03;
+}
+main section .seasons .boxes .box:hover .box:not(.box:hover) {
+  background: red;
+}
+main section .seasons .boxes .box:hover svg {
+  scale: 1.2;
+  transform-origin: right bottom;
+}
+main section .seasons .boxes .box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 13px;
+}
+main section .seasons .boxes .box p {
+  font-size: 0.8rem;
+  color: #fffefeaf;
+  line-height: 17.5px;
+}
+main section .seasons .boxes .box svg {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+/* Seasons End */
+
+/* FAQ Start */
+main section .faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main section .faqs .faq {
+  color: #fff;
+  background: #ffffff2f;
+  cursor: pointer;
+}
+main section .faqs .faq .que {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  font-size: 1.2rem;
+}
+main section .faqs .faq .que h3 {
+  font-weight: 500;
+}
+main section .faqs .faq .que svg {
+  rotate: 0deg;
+}
+main section .faqs .faq .ans {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  border-top: 0px solid black;
+
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: transparent;
+  background: linear-gradient(#00f7ff, rgb(0, 166, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+main section .faqs .faq:hover {
+  background: #ffffff46;
+}
+main section .faqs .faq:focus .ans {
+  height: auto;
+  overflow: hidden;
+  padding: 1rem;
+  border-top: 1px solid black;
+}
+main section .faqs .faq:focus .que svg {
+  rotate: 45deg;
+}
+
+/* FAQ End */
+
+@media screen and (width < 1000px) {
+  header nav {
+    padding-inline: 3rem;
+  }
+  main section .seasons .boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main section .seasons .boxes .box {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 210px;
+  }
+
+  main section#home h1 {
+    font-size: 2rem;
+  }
+  main section#home h3 {
+    font-size: .9rem;
+  }
+  main section#home p {
+    font-size: .9rem;
+  }
+  main section#home div {
+    width: 60%;
+  }
+  main section#home div input {
+  }
+  main section#home div button {
+  }
+}
+@media screen and (width < 750px) {
+  header nav {
+    padding-inline: 3rem;
+  }
+  header nav .links select,
+  header nav .links button {
+    padding: 0.4rem 0.6rem;
+    height: 30px;
+  }
+
+  main section .seasons .boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 180px;
+  }
+  main section#trending .main {
+    padding: 2rem;
+  }
+}
