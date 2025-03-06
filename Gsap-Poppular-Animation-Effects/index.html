@@ -7,7 +7,7 @@
   </head>
   <body>
     <main>
-      <section>
+      <section id="home">
         <h1>Home</h1>
       </section>
 
@@ -55,6 +55,7 @@
 
       <section style="background: #deccea">
         <h1>End</h1>
+        <h3>| Jatin Poriya |</h3>
       </section>
     </main>
 
@@ -106,6 +107,7 @@
       #text #left p {
         position: relative;
         /* transform: translateY(-90%); */
+        font-size: 2.5rem;
       }
 
       #right {
@@ -143,6 +145,22 @@
     ></script>
 
     <script>
+      // Home
+      gsap.to("#home h1", {
+        opacity: 0,
+        transform: "translateY(-100%) rotate(25deg)",
+        scale: 2,
+
+        scrollTrigger: {
+          trigger: "#home",
+          scroller: "main",
+          start: "bottom 90%",
+          end: "bottom 70%",
+          scrub: 2,
+        },
+      });
+
+      // Main
       gsap.to("#left p", {
         transform: "translateY(-90%)",
 
@@ -150,7 +168,7 @@
           trigger: "#text",
           scroller: "main",
           start: "top 0%",
-          end: "top -60%",
+          end: "top -200%",
           scrub: 1,
           pin: true,
         },
